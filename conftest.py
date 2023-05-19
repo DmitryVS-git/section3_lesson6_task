@@ -9,6 +9,8 @@ def pytest_addoption(parser):
     parser.addoption('--browser_name', action='store', default='chrome',
                      help="Choose browser: chrome or firefox")
 
+    # По умолчанию сделал значение у default не None, чтобы при работе с Firefox и без передачи параметра --language в
+    # терминале не было ошибки. Сделал это на всякий случай.
     parser.addoption('--language', action='store', default='fr'
                      , help='Choose language: ru, en, etc...')
 
